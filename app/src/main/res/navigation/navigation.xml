@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragment_News">
+
+    <fragment
+        android:id="@+id/fragment_News"
+        android:name="com.example.nguyenanhlinh_mvvm_newsapp.fragmnet.Fragment_News"
+        android:label="Fragment_News">
+        <action
+            android:id="@+id/action_fragment_News_to_fragment_Web_View"
+            app:destination="@id/fragment_Web_View" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Search"
+        android:name="com.example.nguyenanhlinh_mvvm_newsapp.fragmnet.Fragment_Search"
+        android:label="Fragment_Search">
+        <action
+            android:id="@+id/action_fragment_Search_to_fragment_Web_View"
+            app:destination="@id/fragment_Web_View" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Web_View"
+        android:name="com.example.nguyenanhlinh_mvvm_newsapp.fragmnet.Fragment_Web_View"
+        android:label="Fragment_Web_View">
+        <argument
+            android:name="article"
+            android:defaultValue="@null"
+            app:argType="com.example.nguyenanhlinh_mvvm_newsapp.model.Article"
+            app:nullable="true" />
+    </fragment>
+</navigation>
