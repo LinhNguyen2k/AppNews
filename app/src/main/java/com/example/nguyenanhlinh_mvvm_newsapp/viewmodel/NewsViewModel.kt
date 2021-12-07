@@ -133,6 +133,7 @@ class NewsViewModel(
         }
         return false
     }
+
     fun isCheckStartActivity(): Boolean {
         return when (check) {
             2 -> true
