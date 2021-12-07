@@ -3,7 +3,8 @@
     package="com.example.nguyenanhlinh_mvvm_newsapp">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".NewsApplication"
         android:allowBackup="true"
@@ -13,13 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NguyenAnhLinh_MVVM_NewsApp">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".PassWordMainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
         </activity>
     </application>
 

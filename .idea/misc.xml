@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/drawable/custom_edt_search.xml" value="0.2064814814814815" />
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/drawable/custom_layout_nav.xml" value="0.175" />
+        <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/drawable/custom_login_button.xml" value="0.2222222222222222" />
+        <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/drawable/custom_text_password.xml" value="0.225" />
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/drawable/switch_btn_bg.xml" value="0.2765625" />
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/layout/activity_main.xml" value="0.26132246376811596" />
+        <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/layout/activity_pass_word_main.xml" value="0.264" />
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/layout/fragment_article.xml" value="0.26132246376811596" />
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/layout/fragment_news.xml" value="0.264" />
         <entry key="..\:/Code/Kotlin_Android/NguyenAnhLinh_MVVM_NewsApp/app/src/main/res/layout/fragment_search_news.xml" value="0.26132246376811596" />

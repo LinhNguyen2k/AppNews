@@ -1,4 +1,4 @@
-package com.example.nguyenanhlinh_mvvm_newsapp
+package com.example.nguyenanhlinh_mvvm_newsapp.viewmodel
 
 import android.app.Application
 import android.content.Context
@@ -10,6 +10,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.androiddevs.mvvmnewsapp.repository.NewsRepository
+import com.example.nguyenanhlinh_mvvm_newsapp.NewsApplication
 import com.example.nguyenanhlinh_mvvm_newsapp.model.NewsResponse
 import com.example.nguyenanhlinh_mvvm_newsapp.utils.Resource
 import kotlinx.coroutines.launch
@@ -21,15 +22,13 @@ class NewsViewModel(
 ) : AndroidViewModel(app) {
 
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
-    var breakingNewsPage = 1
     var breakingNewsResponse: NewsResponse? = null
 
     val searchNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
-    var searchNewsPage = 1
     var searchNewsResponse: NewsResponse? = null
     var newSearchQuery: String? = null
     var oldSearchQuery: String? = null
-
+    var check = 0
 
     init {
         getBreakingNews("us")
@@ -46,7 +45,6 @@ class NewsViewModel(
     private fun breakingNewsResponse(response: Response<NewsResponse>): Resource<NewsResponse> {
         if (response.isSuccessful) {
             response.body()?.let { resultResponse ->
-                breakingNewsPage++
                 if (breakingNewsResponse == null) {
                     breakingNewsResponse = resultResponse
                 } else {
@@ -65,11 +63,9 @@ class NewsViewModel(
         if (response.isSuccessful) {
             response.body()?.let { resultResponse ->
                 if (searchNewsResponse == null || newSearchQuery != oldSearchQuery) {
-                    searchNewsPage = 1
                     oldSearchQuery = newSearchQuery
                     searchNewsResponse = resultResponse
                 } else {
-                    searchNewsPage++
                     val oldArticles = searchNewsResponse?.articles
                     val newArticles = resultResponse.articles
                     oldArticles?.addAll(newArticles)
@@ -137,7 +133,23 @@ class NewsViewModel(
         }
         return false
     }
+    fun isCheckStartActivity(): Boolean {
+        return when (check) {
+            2 -> true
+            1 -> {
+                check = 0
+                false
+            }
+            else -> false
+        }
+    }
 
+    fun setData() {
+        if (check == 0)
+            check = 2
+        else if (check == 2)
+            check = 0
+    }
 }
 
 
