@@ -55,7 +55,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
                 ivArticleImage.setImageResource(R.drawable.breaking_news)
             }
 
-            tvSource.text = article.source?.name
+            tvSource.text = article.source.name
             tvTitle.text = article.title
             tvDescription.text = article.description
             @SuppressLint("SimpleDateFormat")

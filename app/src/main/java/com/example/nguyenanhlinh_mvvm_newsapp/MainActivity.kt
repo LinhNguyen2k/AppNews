@@ -27,18 +27,4 @@ class MainActivity : AppCompatActivity() {
         bottom_NVT.setupWithNavController(controller)
 
     }
-
-    override fun onResume() {
-        if (viewModel.isCheckStartActivity()) {
-            val intent = Intent(this, PassWordMainActivity::class.java)
-            intent.putExtra("isCheckStartActivity", true)
-            startActivity(intent)
-        }
-        super.onResume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        viewModel.setData()
-    }
 }
