@@ -44,14 +44,10 @@ class PassWordMainActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             when (temp) {
                 0 -> {
-                    Toast.makeText(applicationContext,
-                        "Bạn chưa nhập mật khẩu",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Bạn chưa nhập mật khẩu", Toast.LENGTH_SHORT).show()
                 }
                 1 -> {
-                    Toast.makeText(applicationContext,
-                        "Mật khẩu chưa chính xác",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Mật khẩu chưa chính xác", Toast.LENGTH_SHORT).show()
                 }
                 2 -> {
                     val intent = Intent(applicationContext, MainActivity::class.java)

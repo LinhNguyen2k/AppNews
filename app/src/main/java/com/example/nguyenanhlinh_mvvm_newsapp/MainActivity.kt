@@ -1,6 +1,5 @@
 package com.example.nguyenanhlinh_mvvm_newsapp
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -27,4 +26,18 @@ class MainActivity : AppCompatActivity() {
         bottom_NVT.setupWithNavController(controller)
 
     }
+
+//    override fun onResume() {
+//        if (viewModel.isCheckStartActivity()) {
+//            val intent = Intent(this, PassWordMainActivity::class.java)
+//            intent.putExtra("isCheckStartActivity", true)
+//            startActivity(intent)
+//        }
+//        super.onResume()
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//        viewModel.setData()
+//    }
 }

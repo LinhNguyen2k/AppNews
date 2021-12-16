@@ -21,7 +21,10 @@ class NewsApplication : Application(), Application.ActivityLifecycleCallbacks,
         super.onPause(owner)
         isCheckView = true
     }
-
+    override fun onResume(owner: LifecycleOwner) {
+        super.onResume(owner)
+        isCheckView = false
+    }
     override fun onActivityResumed(p0: Activity) {
         if (isCheckView && p0 !is PassWordMainActivity) {
             val intent = Intent(this, PassWordMainActivity::class.java)
@@ -30,11 +33,11 @@ class NewsApplication : Application(), Application.ActivityLifecycleCallbacks,
             isCheckView = false
         }
     }
-
-    override fun onActivityCreated(p0: Activity, p1: Bundle?) = Unit
-    override fun onActivityStarted(p0: Activity) = Unit
-    override fun onActivityPaused(p0: Activity) = Unit
     override fun onActivityStopped(p0: Activity) = Unit
     override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) = Unit
     override fun onActivityDestroyed(p0: Activity) = Unit
+    override fun onActivityCreated(p0: Activity, p1: Bundle?) = Unit
+    override fun onActivityStarted(p0: Activity) = Unit
+    override fun onActivityPaused(p0: Activity) = Unit
+
 }

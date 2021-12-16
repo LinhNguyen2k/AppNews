@@ -133,24 +133,23 @@ class NewsViewModel(
         }
         return false
     }
-
-    fun isCheckStartActivity(): Boolean {
-        return when (check) {
-            2 -> true
-            1 -> {
-                check = 0
-                false
-            }
-            else -> false
-        }
-    }
-
-    fun setData() {
-        if (check == 0)
-            check = 2
-        else if (check == 2)
-            check = 0
-    }
+//    fun isCheckStartActivity(): Boolean {
+//        return when (check) {
+//            2 -> true
+//            1 -> {
+//                check = 0
+//                false
+//            }
+//            else -> false
+//        }
+//    }
+//
+//    fun setData() {
+//        if (check == 0)
+//            check = 2
+//        else if (check == 2)
+//            check = 0
+//    }
 }
 
 
