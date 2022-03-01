@@ -18,7 +18,7 @@ import retrofit2.Response
 
 class NewsViewModel(
     app: Application,
-    val newsRepository: NewsRepository,
+    private val newsRepository: NewsRepository,
 ) : AndroidViewModel(app) {
 
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
