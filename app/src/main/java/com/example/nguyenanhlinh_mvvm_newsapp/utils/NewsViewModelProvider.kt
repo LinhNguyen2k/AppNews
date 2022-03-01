@@ -1,4 +1,4 @@
-package com.example.nguyenanhlinh_mvvm_newsapp
+package com.example.nguyenanhlinh_mvvm_newsapp.utils
 
 import android.app.Application
 import androidx.lifecycle.ViewModel

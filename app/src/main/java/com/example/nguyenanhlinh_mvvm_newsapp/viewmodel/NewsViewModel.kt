@@ -10,7 +10,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.androiddevs.mvvmnewsapp.repository.NewsRepository
-import com.example.nguyenanhlinh_mvvm_newsapp.NewsApplication
+import com.example.nguyenanhlinh_mvvm_newsapp.application.NewsApplication
 import com.example.nguyenanhlinh_mvvm_newsapp.model.NewsResponse
 import com.example.nguyenanhlinh_mvvm_newsapp.utils.Resource
 import kotlinx.coroutines.launch

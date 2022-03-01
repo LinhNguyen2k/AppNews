@@ -1,12 +1,15 @@
-package com.example.nguyenanhlinh_mvvm_newsapp
+package com.example.nguyenanhlinh_mvvm_newsapp.application
 
 import android.app.Activity
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
+import com.example.nguyenanhlinh_mvvm_newsapp.activities.PassWordMainActivity
+import kotlin.system.measureTimeMillis
 
 class NewsApplication : Application(), Application.ActivityLifecycleCallbacks,
     DefaultLifecycleObserver {
@@ -21,10 +24,16 @@ class NewsApplication : Application(), Application.ActivityLifecycleCallbacks,
         super.onPause(owner)
         isCheckView = true
     }
+    //ở CallBack này người dùng đã có thể tương tác được với giao diện -> isCheckView = false
     override fun onResume(owner: LifecycleOwner) {
         super.onResume(owner)
         isCheckView = false
+        val time = measureTimeMillis {
+            Log.d("TAG","onResume")
+        }
+        Log.d("TAG","time onResume: $time")
     }
+    //callBack này sẽ được ưu tiên được gọi trước callBack onRsume()
     override fun onActivityResumed(p0: Activity) {
         if (isCheckView && p0 !is PassWordMainActivity) {
             val intent = Intent(this, PassWordMainActivity::class.java)
@@ -32,6 +41,10 @@ class NewsApplication : Application(), Application.ActivityLifecycleCallbacks,
             p0.startActivity(intent)
             isCheckView = false
         }
+        val time = measureTimeMillis {
+            Log.d("TAG","onActivityResumed")
+        }
+        Log.d("TAG","time onActivityResumed: $time")
     }
     override fun onActivityStopped(p0: Activity) = Unit
     override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) = Unit

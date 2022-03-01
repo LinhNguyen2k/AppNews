@@ -1,13 +1,12 @@
-package com.example.nguyenanhlinh_mvvm_newsapp
+package com.example.nguyenanhlinh_mvvm_newsapp.activities
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.nguyenanhlinh_mvvm_newsapp.R
 import com.example.nguyenanhlinh_mvvm_newsapp.viewmodel.PassWordViewModel
 import kotlinx.android.synthetic.main.activity_pass_word_main.*
 

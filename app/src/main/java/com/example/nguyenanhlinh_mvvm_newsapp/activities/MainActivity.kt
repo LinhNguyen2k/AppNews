@@ -1,4 +1,4 @@
-package com.example.nguyenanhlinh_mvvm_newsapp
+package com.example.nguyenanhlinh_mvvm_newsapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.androiddevs.mvvmnewsapp.repository.NewsRepository
+import com.example.nguyenanhlinh_mvvm_newsapp.utils.NewsViewModelProvider
+import com.example.nguyenanhlinh_mvvm_newsapp.R
 import com.example.nguyenanhlinh_mvvm_newsapp.viewmodel.NewsViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 

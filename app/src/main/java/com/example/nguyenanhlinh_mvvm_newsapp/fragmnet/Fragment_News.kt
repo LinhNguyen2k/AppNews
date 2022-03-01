@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.nguyenanhlinh_mvvm_newsapp.MainActivity
+import com.example.nguyenanhlinh_mvvm_newsapp.activities.MainActivity
 import com.example.nguyenanhlinh_mvvm_newsapp.viewmodel.NewsViewModel
 import com.example.nguyenanhlinh_mvvm_newsapp.R
 import com.example.nguyenanhlinh_mvvm_newsapp.adapter.NewsAdapter

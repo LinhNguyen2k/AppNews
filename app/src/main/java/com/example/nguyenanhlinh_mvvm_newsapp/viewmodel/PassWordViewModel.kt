@@ -7,14 +7,14 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 
-class PassWordViewModel(app: Application) : AndroidViewModel(app) {
+class PassWordViewModel(context: Application) : AndroidViewModel(context) {
     var passCode: MutableLiveData<String> = MutableLiveData()
     var check: MutableLiveData<Int?> = MutableLiveData()
     var passWord = ""
     var pass = ""
     var isCheckStartActivity = false
     private val sharedPreferences: SharedPreferences =
-        app.getSharedPreferences("SHARED", Context.MODE_PRIVATE)
+        context.getSharedPreferences("SHARED", Context.MODE_PRIVATE)
 
     init {
         passWord = sharedPreferences.getString("pass", "")!!
