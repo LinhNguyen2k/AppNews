@@ -1,4 +1,4 @@
-package com.androiddevs.mvvmnewsapp.repository
+package com.example.nguyenanhlinh_mvvm_newsapp.repository
 
 import com.example.nguyenanhlinh_mvvm_newsapp.api.RetrofitInstance
 

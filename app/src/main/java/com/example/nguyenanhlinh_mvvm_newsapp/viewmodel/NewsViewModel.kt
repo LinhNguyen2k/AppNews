@@ -9,7 +9,7 @@ import android.os.Build
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.androiddevs.mvvmnewsapp.repository.NewsRepository
+import com.example.nguyenanhlinh_mvvm_newsapp.repository.NewsRepository
 import com.example.nguyenanhlinh_mvvm_newsapp.application.NewsApplication
 import com.example.nguyenanhlinh_mvvm_newsapp.model.NewsResponse
 import com.example.nguyenanhlinh_mvvm_newsapp.utils.Resource
@@ -133,23 +133,6 @@ class NewsViewModel(
         }
         return false
     }
-//    fun isCheckStartActivity(): Boolean {
-//        return when (check) {
-//            2 -> true
-//            1 -> {
-//                check = 0
-//                false
-//            }
-//            else -> false
-//        }
-//    }
-//
-//    fun setData() {
-//        if (check == 0)
-//            check = 2
-//        else if (check == 2)
-//            check = 0
-//    }
 }
 
 

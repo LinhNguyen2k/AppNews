@@ -1,6 +1,7 @@
 package com.example.nguyenanhlinh_mvvm_newsapp.adapter
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -64,7 +65,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
             tvPublishedAt.text = simpleDateFormat.format(formatter.parse(article.publishedAt))
 
             setOnClickListener {
-                onItemClickListener?.let { it(article) }
+                onItemClickListener?.let { it(article)}
             }
         }
     }

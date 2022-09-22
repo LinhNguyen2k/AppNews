@@ -1,6 +1,7 @@
 package com.example.nguyenanhlinh_mvvm_newsapp.fragmnet
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -34,6 +35,7 @@ class Fragment_News : Fragment(R.layout.fragment_news) {
                 bundle
             )
         }
+
 
         viewModel.breakingNews.observe(viewLifecycleOwner, Observer { response ->
             when (response) {

@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.androiddevs.mvvmnewsapp.repository.NewsRepository
+import com.example.nguyenanhlinh_mvvm_newsapp.repository.NewsRepository
 import com.example.nguyenanhlinh_mvvm_newsapp.utils.NewsViewModelProvider
 import com.example.nguyenanhlinh_mvvm_newsapp.R
 import com.example.nguyenanhlinh_mvvm_newsapp.viewmodel.NewsViewModel
